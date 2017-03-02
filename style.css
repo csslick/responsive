@@ -106,12 +106,15 @@
 		}
 		.news time{
 			float: left;
-			width: 120px;
+			width: 100px;
 			/*border: 1px solid;*/
 			box-sizing: border-box;
 		}
 		.news .text{
 			display: block;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
 			/*border: 1px solid red;*/
 			width: auto;	/*고정 + 가변폭 지정*/
 			/*margin-left: 60px;*/
