@@ -20,6 +20,7 @@
 		.site > h1{
 			margin: 0;
 			font-size: 30px;
+			/*border: 1px solid;*/
 		}
 
 
@@ -229,8 +230,9 @@
 		@media screen and (max-width: 767px){
 			/*네비게이션*/
 			.menu ul{
-				margin: 0; padding: 0;
+				margin: 0; padding: 0px;
 				list-style-type: none;
+				margin-top: 10px;
 			}
 			.menu li > a{
 				display: block;
@@ -241,6 +243,28 @@
 			}
 			.menu li > a:hover{
 				background: #eee;
+			}
+
+			#toggle{ display: none; }
+			#toggle ~ nav.menu{ 
+				display: none;
+			}
+			#toggle:checked ~ nav.menu{
+				display: block;
+				user-select: none;
+			}
+			label[for="toggle"]{
+				color: #888;
+				font-style: 18px;
+				border: 1px solid #aaa;
+				border-radius: 5px;
+				padding: 6px 12px;
+				position: absolute;
+				top: 20px; right: 15px;
+				cursor: pointer;
+			}
+			label[for="toggle"]:hover{
+				background: #ddd;
 			}
 		}
 
@@ -304,6 +328,10 @@
 			}
 			.box6-1, .box6-2{
 				margin-right: 2%;
+			}
+
+			#toggle, label[for="toggle"]{
+				display: none;
 			}
 
 		}
